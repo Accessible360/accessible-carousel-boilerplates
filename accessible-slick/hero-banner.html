@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>accessible-slick - hero banner accessible boilerplate</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="accessible, accessibility, wcag, slick, responsive, carousel, slider, jQuery, plugin, CSS3, swipe, touch">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:creator" content="Accessible360">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:domain" content="">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+</head>
+
+<body>
+  <main>
+    <div class="carousel">
+      <div class="slide">
+        <!-- Photo by Rachit Tank on Unsplash: https://unsplash.com/@rachitank -->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/rachit-tank-2cFZ_FB08UM-unsplash.jpg" class="background-image" alt="Fancy wristwatch, front and back views">
+      </div>
+
+      <div class="slide">
+        <!-- Photo by Deanna Alys on Unsplash: https://unsplash.com/@deannaalys -->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/deanna-alys-6LBBOwkPzyQ-unsplash.jpg" class="background-image" alt="Body oil bottle with water bottle and succulent in background">
+        <div class="content">
+          <h2>Fake product</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum elit sit amet volutpat rhoncus.<p>
+          <a href="#" class="cta-link">CTA link</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <!-- Photo by Imani Clovis on Unsplash: https://unsplash.com/@imaniclovis -->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/imani-clovis-LxVxPA1LOVM-unsplash.jpg" class="background-image" alt="Single shoe falling downward">
+      </div>
+
+      <div class="slide">
+        <!-- Photo by Galina N on Unsplash: https://unsplash.com/@galina88 -->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/galina-n-miziNqvJx5M-unsplash.jpg" class="background-image" alt="Small succulent in round planter">
+      </div>
+
+      <div class="slide">
+        <!-- Photo by Curology on Unsplash: https://unsplash.com/@curology -->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/curology-wK0h-mlvfuc-unsplash.jpg" class="background-image" alt="Fake skin care bottle on desk with liquid around it">
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function(e) {
+      $('.carousel').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 7000,
+        prevArrow: '<button class="previous-button is-control">' +
+                  '  <span class="fas fa-angle-left" aria-hidden="true"></span>' +
+                  '  <span class="sr-only">Previous slide</span>' +
+                  '</button>',
+        nextArrow: '<button class="next-button is-control">' +
+                  '  <span class="fas fa-angle-right" aria-hidden="true"></span>' +
+                  '  <span class="sr-only">Next slide</span>' +
+                  '</button>'
+      });
+    });
+  </script>
+
+  <style>
+    :root {
+      --carousel-height: 300px;
+    }
+
+    /** Wrapper */
+    .carousel {
+      position: relative;
+    }
+
+    /* Resets for all buttons */
+    .is-control {
+      z-index: 1;
+      background: none;
+      color: rgba(0,0,0,.7);
+      border: 0;
+      cursor: pointer;
+      transition: all .2s linear;
+    }
+
+      .is-control:focus {
+        outline: none;
+        background-color: rgba(0,0,0,.8);
+        color: rgba(255,255,255,1);
+      }
+
+      /* Pause/play toggle for autoplay */
+      .slick-autoplay-toggle-button {
+        bottom: 15px;
+        left: 10px;
+      }
+
+      /* Previous slide button */
+      .previous-button {
+        position: absolute;
+        left: 0;
+        top: calc(var(--carousel-height)/2 - 40px);
+
+        padding: 5px 15px;
+        z-index: 3;
+
+        font-size: 40px;
+
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: 0;
+      }
+
+      /* Next slide button */
+      .next-button {
+        position: absolute;
+        right: 0;
+        top: calc(var(--carousel-height)/2 - 40px);
+
+        padding: 5px 15px;
+        z-index: 1;
+
+        font-size: 40px;
+
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-right: 0;
+      }
+
+    /**
+      Single slide
+    */
+    .slide {
+      position: relative;
+      height: var(--carousel-height);
+    }
+
+      .slide .background-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+    /**
+      Slide 2 content
+    */
+    .slide .content {
+      position: absolute;
+      top: 20px;
+      left: 15%;
+
+      max-width: 400px;
+      width: 50%;
+      max-height: 70%;
+      padding: 15px;
+
+      white-space: normal;
+      color: white;
+      background-color: royalblue;
+      box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+    }
+
+      .slide .content h2 {
+        margin: 0;
+        font-size: 1.7rem;
+      }
+
+      .slide .content p {
+        margin: 10px 0 20px 0;
+      }
+
+      .slide .content .cta-link {
+        display: inline-block;
+        padding: 5px 10px;
+
+        background-color: white;
+        color: rgba(0,0,0,.7);
+        text-decoration: none;
+        font-weight: 800;
+        box-shadow: 3px 3px 0 0 rgba(0,0,0,.3);
+      }
+
+        .slide .content .cta-link:focus,
+        .slide .content .cta-link:hover {
+          text-decoration: underline;
+          color: black;
+        }
+
+        .slide .content .cta-link:focus {
+          outline: 3px solid rgba(0,0,0,1);
+        }
+
+    /** Slide dots */
+    .slick-dots {
+      bottom: 15px;
+    }
+
+      .slick-dots li {
+        padding: 0;
+        margin: 0 1px;
+      }
+  </style>
+  </body>
+</html>

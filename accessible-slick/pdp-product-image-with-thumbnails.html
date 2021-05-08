@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>accessible-slick - PDP product images with thumbnails accessible boilerplate</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="accessible, accessibility, wcag, slick, responsive, carousel, slider, jQuery, plugin, CSS3, swipe, touch">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="300">
+  <meta property="og:image:height" content="300">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:creator" content="Accessible360">
+  <meta name="twitter:image:src" content="">
+  <meta name="twitter:domain" content="">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+</head>
+
+<body>
+  <main>
+    <div class="product-images">
+      <!-- Large, currently-active image -->
+      <div class="current-image">
+        <a href="https://accessible360.com">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/blanca-paloma-sanchez-500x500.jpg" alt="Succulents 1">
+        </a>
+      </div>
+
+      <!-- Thumbnail track -->
+      <div class="thumbnails">
+        <div class="thumbnail">
+          <button class="thumbnail-button" aria-current="true">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/blanca-paloma-sanchez-500x500.jpg" alt="image 1 of 5" data-full-alt="Succulents 1">
+          </button>
+        </div>
+
+        <div class="thumbnail">
+          <button class="thumbnail-button">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/erol-ahmed-500x500.jpg" alt="image 2 of 5" data-full-alt="Succulents 2">
+          </button>
+        </div>
+
+        <div class="thumbnail">
+          <button class="thumbnail-button">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/armando-castillejo-500x500.jpg" alt="image 3 of 5" data-full-alt="Succulents 3">
+          </button>
+        </div>
+
+        <div class="thumbnail">
+          <button class="thumbnail-button">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/calle-macarone-500x500.jpg" alt="image 4 of 5" data-full-alt="Succulents 4">
+          </button>
+        </div>
+
+        <div class="thumbnail">
+          <button class="thumbnail-button">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/annie-spratt-500x500.jpg" alt="image 5 of 5" data-full-alt="Succulents 5">
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
+
+  <script>
+    var currentImage;
+    var thumbnails, thumbnailButtons;
+
+    window.addEventListener('DOMContentLoaded', function(e) {
+      currentImage = document.querySelector('.current-image');
+
+      /**
+        Initialize Slick Slider with recommended configuration options
+      */
+      $('.thumbnails').slick({
+        slidesToShow: 3,
+        prevArrow: '<button class="previous-button is-control">' +
+                  '  <span class="fas fa-angle-left" aria-hidden="true"></span>' +
+                  '  <span class="sr-only">Previous slide</span>' +
+                  '</button>',
+        nextArrow: '<button class="next-button is-control">' +
+                  '  <span class="fas fa-angle-right" aria-hidden="true"></span>' +
+                  '  <span class="sr-only">Next slide</span>' +
+                  '</button>',
+        infinite: false,
+        responsive: [
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 375,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
+    });
+
+
+    /**
+      Update the large current image when a thumbnail button is activated.
+    */
+    function activateThumbnail(thumbnailButton) {
+      // Swap the current image based to match the thumbnail
+      // - If you'd like to use separate images, like higher-res versions, consider using the index to pick an appropriate src string from an array, or storing the URI of the higher-res image in a custom data attribute on the thumbnail.
+      var newImageSrc = thumbnailButton.querySelector('img').getAttribute('src');
+      var newImageAlt = thumbnailButton.querySelector('img').getAttribute('data-full-alt');
+      currentImage.querySelector('img').setAttribute('src', newImageSrc);
+      currentImage.querySelector('img').setAttribute('alt', newImageAlt);
+
+      // Remove aria-current from any previously-activated thumbnail
+      thumbnailButtons.forEach(function(button) {
+        button.removeAttribute('aria-current');
+      });
+
+      // Indicate to screen readers which thumbnail is selected using aria-current
+      thumbnailButton.setAttribute('aria-current', true);
+    }
+  </script>
+
+  <style>
+    /**
+      Setup for code demo only
+    */
+    :root {
+      --current-image-height: 300px;
+      --thumbnails-track-height: 90px;
+      --thumbnail-width: 100px;
+    }
+
+    body {
+      margin: 10px;
+    }
+
+
+    /** Container */
+    .product-images {
+      max-width: 400px;
+    }
+
+
+    /** Current image */
+    .current-image {
+      margin-bottom: 1px;
+    }
+
+      .current-image a {
+        display: block;
+        height: var(--current-image-height);
+        overflow: hidden;
+        position: relative;
+      }
+
+        .current-image a:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: box-shadow .1s linear;
+        }
+
+        .current-image a:focus {
+          outline: 0;
+        }
+
+          .current-image a:focus:before {
+            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+          }
+
+      .current-image img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+
+    /** Previous and next buttons */
+    .button {
+      background: none;
+      border: 0;
+      cursor: pointer;
+
+      font-size: 30px;
+      color: rgba(0,0,0,.7);
+
+      padding: 0;
+      margin: 0 1px;
+      flex: 0 0 25px;
+
+      transition: all .2s linear;
+    }
+
+      .button:hover {
+        background-color: rgba(0,0,0,.1);
+        color: black;
+      }
+
+      .button:focus {
+        outline: none;
+        background-color: royalblue;
+        color: rgba(255,255,255,1);
+      }
+
+    /** Single thumbnail */
+    .thumbnail {
+      flex: 0 0 var(--thumbnail-width);
+      margin-right: 1px;
+      position: relative;
+    }
+
+      .thumbnail-button {
+        display: block;
+        padding: 0;
+        height: var(--thumbnails-track-height);
+
+        cursor: pointer;
+        border: 0;
+        background: none;
+        background-color: rgba(0,0,0,.4);
+        transition: opacity .1s linear;
+      }
+
+        .thumbnail-button:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: box-shadow .1s linear;
+        }
+
+        .thumbnail-button:focus {
+          outline: 0;
+        }
+
+          .thumbnail-button:focus:before {
+            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+          }
+
+          .thumbnail-button:focus img,
+          .thumbnail-button:hover img,
+          .thumbnail-button[aria-current="true"] img {
+            opacity: 1;
+            filter: grayscale(0);
+          }
+
+        .thumbnail-button img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          opacity: .5;
+          filter: grayscale(.6);
+          transition: all .1s linear;
+        }
+  </style>
+  </body>
+</html>
