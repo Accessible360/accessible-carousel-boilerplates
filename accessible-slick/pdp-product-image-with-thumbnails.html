@@ -88,6 +88,21 @@
       currentImage = document.querySelector('.current-image');
 
       /**
+        When Slick is initialized, retrieve the relevant DOM elements and watch for activation of the thumbnail buttons
+      */
+      $('.thumbnails').on('init', function(e, slick) {
+        thumbnailButtons = document.querySelectorAll('.thumbnails .thumbnail .thumbnail-button');
+
+        // Update the large image each time a thumbnail is activated
+        thumbnailButtons.forEach(function(thumbnailButton) {
+          thumbnailButton.addEventListener('click', function(e) {
+            activateThumbnail(thumbnailButton);
+          });
+        });
+      });
+
+
+      /**
         Initialize Slick Slider with recommended configuration options
       */
       $('.thumbnails').slick({
@@ -152,7 +167,6 @@
 
     body {
       margin: 10px;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -160,6 +174,16 @@
     .product-images {
       max-width: 400px;
     }
+
+
+    /** Thumbnails track */
+    .thumbnails {
+      display: flex;
+    }
+
+      .slick-list {
+        flex: 1 1 auto;
+      }
 
 
     /** Current image */
@@ -189,7 +213,8 @@
         }
 
           .current-image a:focus:before {
-            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+            box-shadow: inset 0 0 0 1px black,
+                        inset 0 0 0 5px white;
           }
 
       .current-image img {
@@ -237,6 +262,7 @@
       .thumbnail-button {
         display: block;
         padding: 0;
+        margin-right: 1px;
         height: var(--thumbnails-track-height);
 
         cursor: pointer;
@@ -261,7 +287,8 @@
         }
 
           .thumbnail-button:focus:before {
-            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+            box-shadow: inset 0 0 0 1px black,
+                        inset 0 0 0 4px white;
           }
 
           .thumbnail-button:focus img,
