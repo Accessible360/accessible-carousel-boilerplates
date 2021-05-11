@@ -3,7 +3,7 @@
 <head>
   <title>Flickity - linked product cards accessible boilerplate</title>
 
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <meta name="description" content="">
@@ -155,20 +155,21 @@
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
 
   <script>
     var $carousel;
     var cardsContainer, cards;
     var previousButton, nextButton;
 
-    // Get tile sizing parameters directly form CSS variables defined at :root
-    var cardWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-width'));
-    var cardMargin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-margin'));
-
+    // CSS variables with tile sizing parameters defined at :root
+    var cardWidth, cardMargin
     var leftMostCardIndex = 0;
 
     window.addEventListener('DOMContentLoaded', function(e) {
+      cardWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-width'));
+      cardMargin = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--card-margin'));
+
       cardsContainer = document.querySelector('.carousel .cards');
       previousButton = document.querySelector('.carousel .previous-button');
       nextButton = document.querySelector('.carousel .next-button');
