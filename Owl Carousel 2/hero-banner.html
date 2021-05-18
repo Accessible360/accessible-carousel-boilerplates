@@ -96,6 +96,10 @@
       <!-- Custom slide dots, which we'll populate using JavaScript. See the `createSlideDots()` method. -->
       <ul class="navigation"></ul>
     </section>
+
+    <a href="https://accessible360.com" class="credits" target="_blank">
+      Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+    </a>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -539,6 +543,30 @@
     .disabled {
       display: none;
     }
+
+    /** Credits at bottom */
+    .credits {
+      display: inline-block;
+      margin-top: 20px;
+      margin-left: 20px;
+      padding: 5px;
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+      opacity: .7;
+    }
+
+      .credits img {
+        height: 30px;
+        margin-left: 5px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+
+      .credits:hover,
+      .credits:focus {
+        opacity: 1;
+      }
   </style>
   </body>
 </html>

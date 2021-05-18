@@ -46,7 +46,7 @@
         <div class="content">
           <h2>Fake product</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus bibendum elit sit amet volutpat rhoncus.<p>
-          <a href="#" class="cta-link">CTA link</a>
+          <a href="https://accessible360.com" class="cta-link">CTA link</a>
         </div>
       </div>
 
@@ -65,6 +65,10 @@
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/curology-wK0h-mlvfuc-unsplash.jpg" class="background-image" alt="Fake skin care bottle on desk with liquid around it">
       </div>
     </div>
+
+    <a href="https://accessible360.com" class="credits" target="_blank">
+      Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+    </a>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -101,6 +105,7 @@
     /** Wrapper */
     .carousel {
       position: relative;
+      margin-bottom: 20px !important;
       max-width: 800px;
       width: 100%;
     }
@@ -232,6 +237,28 @@
         padding: 0;
         margin: 0 1px;
       }
+
+      /** Credits at bottom */
+      .credits {
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 14px;
+        color: black;
+        text-decoration: none;
+        opacity: .7;
+      }
+
+        .credits img {
+          height: 30px;
+          margin-left: 5px;
+          margin-top: -2px;
+          vertical-align: middle;
+        }
+
+        .credits:hover,
+        .credits:focus {
+          opacity: 1;
+        }
   </style>
   </body>
 </html>

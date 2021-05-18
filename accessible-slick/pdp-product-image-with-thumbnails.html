@@ -75,6 +75,10 @@
         </div>
       </div>
     </div>
+
+    <a href="https://accessible360.com" class="credits" target="_blank">
+      Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+    </a>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -167,6 +171,7 @@
 
     body {
       margin: 10px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -308,6 +313,27 @@
           filter: grayscale(.6);
           transition: all .1s linear;
         }
+
+    /** Credits at bottom */
+    .credits {
+      padding: 10px;
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+      opacity: .7;
+    }
+
+      .credits img {
+        height: 30px;
+        margin-left: 5px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+
+      .credits:hover,
+      .credits:focus {
+        opacity: 1;
+      }
   </style>
   </body>
 </html>

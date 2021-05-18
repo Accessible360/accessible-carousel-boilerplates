@@ -76,6 +76,10 @@
       </button>
     </div>
 
+    <a href="https://accessible360.com" class="credits" target="_blank">
+      Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+    </a>
+
     <!-- Quick view dialog - reused for each tile -->
     <div class="dialog is-hidden" role="dialog" aria-modal="true">
       <div class="overlay">
@@ -388,6 +392,28 @@
           .dialog .overlay .ok-button:focus {
             outline-offset: 5px;
           }
+
+    /** Credits at bottom */
+    .credits {
+      margin-left: 40px;
+      padding: 10px;
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+      opacity: .7;
+    }
+
+      .credits img {
+        height: 30px;
+        margin-left: 5px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+
+      .credits:hover,
+      .credits:focus {
+        opacity: 1;
+      }
   </style>
   </body>
 </html>
