@@ -68,6 +68,8 @@
 
         <h2 id="Flickity" tabindex="-1">Flickity</h2>
 
+        <p><a href="https://github.com/metafizzy/flickity">Flickity</a> has some good things going for it, but also a few major issues for accessibility. Avoid using the <code>wrapAround</code> and <code>accessibility</code> options, and be sure to hide all the interactive content inside of each slide.</p>
+
         <ul>
           <li><a href="Flickity/hero-banner.html">Hero banner</a></li>
           <li><a href="Flickity/linked-product-cards.html">Linked product cards</a></li>
@@ -76,6 +78,8 @@
         </ul>
 
         <h2 id="Owl-Carousel-2" tabindex="-1">Owl Carousel 2</h2>
+
+        <p><a href="https://github.com/OwlCarousel2/OwlCarousel2">Owl Carousel 2</a> is officially deprecated and should not be used for new projects! Avoid using the inaccessible built-in slide dots, and be sure to use the events API to hide all non-visible slides.</p>
 
         <ul>
           <li><a href="Owl Carousel 2/hero-banner.html">Hero banner</a></li>
@@ -86,6 +90,8 @@
 
         <h2 id="Slick-Slider" tabindex="-1">Slick Slider</h2>
 
+        <p><a href="https://github.com/kenwheeler/slick">Slick Slider</a> is perhaps the most widely-used carousel package, even though it has been <a href="https://github.com/kenwheeler/slick/graphs/contributors">abandoned</a> (though not officially deprecated) by its author. Ironically, you should avoid the <code>accessibility</code> option, since it actually makes the markup worse for disabled users! Be sure to use the latest version (1.8.1 as of May 2021), which includes some important updates that affect accessibility. Custom JavaScript will be needed to ensure that non-visible slides are actually hidden.</p>
+
         <ul>
           <li><a href="Slick Slider/hero-banner.html">Hero banner</a></li>
           <li><a href="Slick Slider/linked-product-cards.html">Linked product cards</a></li>
@@ -94,6 +100,8 @@
         </ul>
 
         <h2 id="Splide" tabindex="-1">Splide</h2>
+
+        <p><a href="https://github.com/Splidejs/splide">Splide</a> may be the most accessible package of all of these, with good use of semantic HTML. Avoid the <code>keyboard</code> and <code>slideFocus</code> options. Some minor work needs to be done to ensure that non-visible slides are fully hidden.</p>
 
         <ul>
           <li><a href="Splide/hero-banner.html">Hero banner</a></li>
