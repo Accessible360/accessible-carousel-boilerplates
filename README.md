@@ -1,10 +1,8 @@
 # Accessible carousel boiilerplates
 
-Carousels aren't [effective](https://www.nngroup.com/articles/auto-forwarding) or [popular](https://erikrunyon.com/2013/01/carousel-interaction-stats/) with real users, but sometimes you just have no choice - managers and clients want what they want! At Accessible360, we've found that carousels almost always have accessibility barriers that range from annoyances to full-blown WCAG violations and blockers. We see this so often, in fact, that we thought it was time somebody did something about it!
+Carousels aren't [effective](https://erikrunyon.com/2013/01/carousel-interaction-stats/) or [popular](https://www.nngroup.com/articles/auto-forwarding) with real users, but sometimes you just have no choice! At [Accessible360](https://accessible360.com/), we see carousels on client sites every day, and we've found them to be a common source of accessibility barriers practically every time they are used.
 
-In an ideal world, every one of these carousel packages would be improved at their source repositories (and maybe someday they will!), but unfortunately many of them have been abandoned or have such large, ad-hoc communities that making forward progress can be a serious challenge. We believe it's worthwhile to engage in that process, but we also recognize that real-world teams need solutions _now_ so they can pass accessibility audits and improve customer satisfaction and retention.
-
-To help make a difference for end users and developers, we're releasing this set of realistic, ready-to-use code snippets for popular carousel packages that you can start using right now to create more accessible carousels and sliders! So far we have examples for:
+To help make a difference for end users and developers sooner rather than later, we're releasing this set of realistic, ready-to-use code snippets for popular carousel packages that you can start using right now to create more accessible carousels and sliders! So far we have snippets for:
 
 * <a href="#accessible-slick">accessible-slick</a>
 * <a href="#Flickity">Flickity</a>
@@ -13,6 +11,8 @@ To help make a difference for end users and developers, we're releasing this set
 * <a href="#Splide">Splide</a>
 
 If you'd like to see snippets for other carousel packages or use cases, [please let us know](https://github.com/Accessible360/accessible-carousel-boilerplates/issues)!
+
+All of these code snippets can also be found over on [CodePen in this collection](https://codepen.io/collection/narjZO) (they are exactly the same!).
 
 ## accessible-slick
 [accessible-slick](https://github.com/Accessible360/accessible-slick) is a drop-in replacement for the classic Slick Slider package that adds a layer of built-in accessibility improvements. Since practically all of its accessibility improvements are baked right into the package, these code snippets end up being the smallest and simplest.
