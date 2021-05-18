@@ -47,7 +47,7 @@
       <div class="thumbnails-track">
         <!-- Previous button -->
         <div class="arrow-wrapper previous-button-wrapper">
-          <button class="previous-button is-control">
+          <button class="previous-button button">
             <span class="fas fa-angle-left" aria-hidden="true"></span>
             <span class="sr-only">Previous tiles</span>
           </button>
@@ -92,7 +92,7 @@
 
         <!-- Next button -->
         <div class="arrow-wrapper next-button-wrapper">
-          <button class="next-button is-control">
+          <button class="next-button button">
             <span class="fas fa-angle-right" aria-hidden="true"></span>
             <span class="sr-only">Next tiles</span>
           </button>
@@ -193,7 +193,6 @@
 
     body {
       margin: 10px;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -230,7 +229,8 @@
         }
 
           .current-image a:focus:before {
-            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+            box-shadow: inset 0 0 0 1px black,
+                        inset 0 0 0 4px white;
           }
 
       .current-image img {
@@ -263,7 +263,8 @@
       .previous-button-wrapper { left: 0; }
       .next-button-wrapper { right: 0; }
 
-    .is-control {
+    /** Previous and next buttons */
+    .button {
       background: none;
       border: 0;
       cursor: pointer;
@@ -273,31 +274,33 @@
 
       padding: 0;
       margin: 0 1px;
-      width: 25px;
+      flex: 0 0 25px;
+      height: 100%;
 
       transition: all .2s linear;
     }
 
-      .is-control:hover {
+      .button:hover {
         background-color: rgba(0,0,0,.1);
         color: black;
       }
 
-      .is-control:focus {
+      .button:focus {
         outline: none;
         background-color: royalblue;
         color: rgba(255,255,255,1);
       }
 
+      .button:disabled {
+        opacity: .3;
+      }
+
     /** Single thumbnail */
     .thumbnail {
+      flex: 0 0 var(--thumbnail-width);
+      margin-right: 1px;
       position: relative;
-      visibility: hidden;
     }
-
-      .thumbnail.is-visible {
-        visibility: visible;
-      }
 
       .thumbnail-button {
         display: block;
@@ -326,7 +329,8 @@
         }
 
           .thumbnail-button:focus:before {
-            box-shadow: inset 0 0 0 5px hsl(204, 86%, 53%);
+            box-shadow: inset 0 0 0 1px black,
+                        inset 0 0 0 4px white;
           }
 
           .thumbnail-button:focus img,
@@ -340,8 +344,9 @@
           display: block;
           width: 100%;
           height: 100%;
-          opacity: .5;
           object-fit: cover;
+
+          opacity: .5;
           filter: grayscale(.6);
           transition: all .1s linear;
         }
