@@ -7,7 +7,7 @@
   <meta name="keywords" content="">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="">
+  <meta property="og:title" content="Accessible carousel boilerplates by Accessible360">
   <meta property="og:description" content="">
   <meta property="og:type" content="article">
   <meta property="og:url" content="">
@@ -18,7 +18,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="">
+  <meta name="twitter:title" content="Accessible carousel boilerplates by Accessible360">
   <meta name="twitter:description" content="">
   <meta name="twitter:creator" content="Accessible360">
   <meta name="twitter:image:src" content="">
@@ -29,94 +29,179 @@
 </head>
 
 <body>
-  <main>
-    <h1>Accessible carousel boilerplates</h1>
+  <div class="container">
+    <header>
+      <img src="images/carousel-hero.jpg" class="hero-image" alt="">
+      <div class="title-container">
+        <h1>Accessible carousel boilerplates</h1>
+      </div>
+    </header>
 
-    <p>Carousels aren't <a href="https://www.nngroup.com/articles/auto-forwarding">effective</a> or <a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">popular</a> with real users, but sometimes you just have no choice - managers and clients want what they want! At Accessible360, we've found that carousels almost always have accessibility barriers that range from annoyances to full-blown WCAG violations and blockers. We see this so often, in fact, that we thought it was time somebody did something about it!</p>
+    <main>
+      <p>Carousels aren't <a href="https://www.nngroup.com/articles/auto-forwarding">effective</a> or <a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">popular</a> with real users, but sometimes you just have no choice - managers and clients want what they want! At Accessible360, we've found that carousels almost always have accessibility barriers that range from annoyances to full-blown WCAG violations and blockers. We see this so often, in fact, that we thought it was time somebody did something about it!</p>
 
-    <p>In an ideal world, every one of these carousel packages would be improved at their source repositories (and maybe someday they will!), but unfortunately many of them have been abandoned or have such large, ad-hoc communities that making forward progress can be a serious challenge. We believe it's worthwhile to engage in that process, but we also recognize that real-world teams need solutions <em>now</em> so they can pass accessibility audits and improve customer satisfaction and retention.</p>
+      <p>In an ideal world, every one of these carousel packages would be improved at their source repositories (and maybe someday they will!), but unfortunately many of them have been abandoned or have such large, ad-hoc communities that making forward progress can be a serious challenge. We believe it's worthwhile to engage in that process, but we also recognize that real-world teams need solutions <em>now</em> so they can pass accessibility audits and improve customer satisfaction and retention.</p>
 
-    <p>To help make a difference for end users and developers, we're releasing this set of realistic, ready-to-use code snippets for popular carousel packages that you can start using right now to create more accessible carousels and sliders! So far we have examples for:</p>
-
-    <ul>
-      <li><a href="#accessible-slick">accessible-slick</a></li>
-      <li><a href="#Flickity">Flickity</a></li>
-      <li><a href="#Owl-Carousel-2">Owl Carousel 2</a></li>
-      <li><a href="#Slick-Slider">Slick Slider</a></li>
-      <li><a href="#Splide">Splide</a></li>
-    </ul>
-
-    <p>If you'd like to see snippets for other carousel packages, <a href="https://github.com/Accessible360/accessible-carousel-boilerplates/issues">please let us know</a>!</p>
-
-    <section>
-      <h2 id="accessible-slick" tabindex="-1">accessible-slick</h2>
-
-      <p><a href="https://github.com/Accessible360/accessible-slick">accessible-slick</a> is a fork of the classic Slick Slider package built by Accessible360 that adds a layer of accessibility improvements to every carousel it's used on. It's designed to be a drop-in replacement for Slick Slider, meaning you can just swap your CDN URLs or hosted files to accessible-slick's and you're good to go! Since practically all of its accessibility improvements are baked right into the package, these code snippets end up being the smallest and simplest.</p>
+      <p>To help make a difference for end users and developers, we're releasing this set of realistic, ready-to-use code snippets for popular carousel packages that you can start using right now to create more accessible carousels and sliders! So far we have examples for:</p>
 
       <ul>
-        <li><a href="accessible-slick/hero-banner.html">Hero banner</a></li>
-        <li><a href="accessible-slick/linked-product-cards.html">Linked product cards</a></li>
-        <li><a href="accessible-slick/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
-        <li><a href="accessible-slick/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        <li><a href="#accessible-slick">accessible-slick</a></li>
+        <li><a href="#Flickity">Flickity</a></li>
+        <li><a href="#Owl-Carousel-2">Owl Carousel 2</a></li>
+        <li><a href="#Slick-Slider">Slick Slider</a></li>
+        <li><a href="#Splide">Splide</a></li>
       </ul>
 
-      <h2 id="Flickity" tabindex="-1">Flickity</h2>
+      <p>If you'd like to see snippets for other carousel packages or use cases, <a href="https://github.com/Accessible360/accessible-carousel-boilerplates/issues">please let us know</a>!</p>
 
-      <ul>
-        <li><a href="Flickity/hero-banner.html">Hero banner</a></li>
-        <li><a href="Flickity/linked-product-cards.html">Linked product cards</a></li>
-        <li><a href="Flickity/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
-        <li><a href="Flickity/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
-      </ul>
+      <section>
+        <h2 id="accessible-slick" tabindex="-1">accessible-slick</h2>
 
-      <h2 id="Owl-Carousel-2" tabindex="-1">Owl Carousel 2</h2>
+        <p><a href="https://github.com/Accessible360/accessible-slick">accessible-slick</a> is a drop-in replacement for the classic Slick Slider package that adds a layer of built-in accessibility improvements. Since practically all of its accessibility improvements are baked right into the package, these code snippets end up being the smallest and simplest.</p>
 
-      <ul>
-        <li><a href="Owl Carousel 2/hero-banner.html">Hero banner</a></li>
-        <li><a href="Owl Carousel 2/linked-product-cards.html">Linked product cards</a></li>
-        <li><a href="Owl Carousel 2/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
-        <li><a href="Owl Carousel 2/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
-      </ul>
+        <ul>
+          <li><a href="accessible-slick/hero-banner.html">Hero banner</a></li>
+          <li><a href="accessible-slick/linked-product-cards.html">Linked product cards</a></li>
+          <li><a href="accessible-slick/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
+          <li><a href="accessible-slick/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        </ul>
 
-      <h2 id="Slick-Slider" tabindex="-1">Slick Slider</h2>
+        <h2 id="Flickity" tabindex="-1">Flickity</h2>
 
-      <ul>
-        <li><a href="Slick Slider/hero-banner.html">Hero banner</a></li>
-        <li><a href="Slick Slider/linked-product-cards.html">Linked product cards</a></li>
-        <li><a href="Slick Slider/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
-        <li><a href="Slick Slider/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
-      </ul>
+        <ul>
+          <li><a href="Flickity/hero-banner.html">Hero banner</a></li>
+          <li><a href="Flickity/linked-product-cards.html">Linked product cards</a></li>
+          <li><a href="Flickity/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
+          <li><a href="Flickity/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        </ul>
 
-      <h2 id="Splide" tabindex="-1">Splide</h2>
+        <h2 id="Owl-Carousel-2" tabindex="-1">Owl Carousel 2</h2>
 
-      <ul>
-        <li><a href="Splide/hero-banner.html">Hero banner</a></li>
-        <li><a href="Splide/linked-product-cards.html">Linked product cards</a></li>
-        <li><a href="Splide/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
-        <li><a href="Splide/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
-      </ul>
-    </section>
-  </main>
+        <ul>
+          <li><a href="Owl Carousel 2/hero-banner.html">Hero banner</a></li>
+          <li><a href="Owl Carousel 2/linked-product-cards.html">Linked product cards</a></li>
+          <li><a href="Owl Carousel 2/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
+          <li><a href="Owl Carousel 2/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        </ul>
+
+        <h2 id="Slick-Slider" tabindex="-1">Slick Slider</h2>
+
+        <ul>
+          <li><a href="Slick Slider/hero-banner.html">Hero banner</a></li>
+          <li><a href="Slick Slider/linked-product-cards.html">Linked product cards</a></li>
+          <li><a href="Slick Slider/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
+          <li><a href="Slick Slider/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        </ul>
+
+        <h2 id="Splide" tabindex="-1">Splide</h2>
+
+        <ul>
+          <li><a href="Splide/hero-banner.html">Hero banner</a></li>
+          <li><a href="Splide/linked-product-cards.html">Linked product cards</a></li>
+          <li><a href="Splide/pdp-product-image-with-thumbnails.html">PDP product image with thumbnails</a></li>
+          <li><a href="Splide/product-tiles-with-quick-view-functionality.html">Product tiles with quick view functionality</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Brought to you by <a href="https://accessible360.com" target="_blank">Accessible360</a></p>
+    <a href="https://accessible360.com" target="_blank" class="logo-link"><img src="./images/accessible360-tag-logo-white.png" alt="Accessible360.com" ></a>
+  </footer>
 
   <style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 20px;
-    background-color: #bfcdcf;
+    margin: 40px;
+    background-color: #005166;
+  }
+
+    @media screen and (max-width: 768px) {
+      body {
+        margin: 0;
+      }
+    }
+
+  .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
   }
 
   main {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
+    padding: 10px 60px 60px 60px;
   }
 
-  h1 {
-    margin-top: 0;
-    border-bottom: 1px solid rgba(0,0,0,.1);
+    @media screen and (max-width: 768px) {
+      main {
+        padding: 30px;
+      }
+    }
+
+  header {
+    position: relative;
   }
+
+    header .hero-image {
+      width: calc(100% - 20px);
+      margin: 10px;
+    }
+
+    header .title-container {
+      position: absolute;
+      bottom: 0;
+      width: calc(100% - 40px);
+      margin: 20px 20px 0 20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+      header .title-container h1 {
+        display: inline-block;
+        margin: 0;
+        padding: 10px 30px;
+        background-color: white;
+        font-family: monospace;
+        font-size: 36px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+  footer {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+  }
+
+    footer p {
+      margin-bottom: 0;
+    }
+
+      footer p a {
+        color: white;
+        font-weight: bold;
+      }
+
+    footer .logo-link {
+      display: inline-block;
+    }
+
+      footer .logo-link img {
+        display: block;
+        width: auto;
+        height: 100px;
+      }
 
   h2 {
     margin-top: 30px;
@@ -128,7 +213,7 @@
   }
 
   a {
-    color: hsl(217, 71%, 53%);
+    color: #005166;
   }
 
   ul {
