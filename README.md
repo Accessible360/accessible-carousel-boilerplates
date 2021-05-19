@@ -1,4 +1,4 @@
-# Accessible carousel boiilerplates
+# Accessible carousel boilerplates
 
 Carousels aren't [effective](https://erikrunyon.com/2013/01/carousel-interaction-stats/) or [popular](https://www.nngroup.com/articles/auto-forwarding) with real users, but sometimes you just have no choice! At [Accessible360](https://accessible360.com/), we see carousels on client sites every day, and we've found them to be a common source of accessibility barriers practically every time they are used.
 
