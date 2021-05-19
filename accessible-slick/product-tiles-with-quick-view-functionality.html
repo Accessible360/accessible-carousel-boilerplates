@@ -113,8 +113,8 @@
       /**
         Once Slick has initialized, retrieve the relevant DOM elements and setup tile functionality
       */
-      $('.carousel .tiles').on('init', function(e, slick) {
-        tiles = document.querySelectorAll('.tiles .tile');
+      $('.carousel').on('init', function(e, slick) {
+        tiles = document.querySelectorAll('.carousel .tile');
 
         // Activating any tile should launch the quick view modal
         tiles.forEach(function(tile) {
