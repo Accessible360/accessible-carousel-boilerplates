@@ -53,3 +53,12 @@ All of these code snippets can also be found over on [CodePen in this collection
 * Linked product cards - [live demo](https://accessible360.github.io/accessible-carousel-boilerplates/Splide/linked-product-cards.html) and [source code](https://github.com/Accessible360/accessible-carousel-boilerplates/blob/main/Splide/linked-product-cards.html)
 * PDP product image with thumbnails - [live demo](https://accessible360.github.io/accessible-carousel-boilerplates/Splide/pdp-product-image-with-thumbnails.html) and [source code](https://github.com/Accessible360/accessible-carousel-boilerplates/blob/main/Splide/pdp-product-image-with-thumbnails.html)
 * Product tiles with quick view functionality - [live demo](https://accessible360.github.io/accessible-carousel-boilerplates/Splide/product-tiles-with-quick-view-functionality.html) and [source code](https://github.com/Accessible360/accessible-carousel-boilerplates/blob/main/Splide/product-tiles-with-quick-view-functionality.html)
+
+---
+
+## Credits
+The research and code snippets provided in this article were made by [Accessible360](https://accessible360.com), whose expert accessibility engineers were invaluable in providing their insight, feedback, and time on this topic.
+
+If your company is looking for an accessibility partner to help bring your product to the next level through live user audits, monitoring, training, or remediation support, then get in touch today!
+
+[![Visit Accessible360.com](./images/accessible360-tag-logo-color.png)](https://accessible360.com)
