@@ -169,6 +169,7 @@
     function disableAutoplay() {
       // Disable autoplay using the Splide API
       splide.Components.Autoplay.pause();
+      splide.options = { autoplay: false };
 
       // Switch the rotation button icon to "resume"
       pauseContainer.classList.remove('is-visible');
@@ -178,6 +179,7 @@
     function enableAutoplay() {
       // Disable autoplay using the Splide API
       splide.Components.Autoplay.play();
+      splide.options = { autoplay: true };
 
       // Switch the rotation button icon to "pause"
       pauseContainer.classList.add('is-visible');
